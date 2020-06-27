@@ -31,9 +31,9 @@ class SessionsController < ApplicationController
     if user.default?
       redirect_to default_user_profile_path
     elsif user.merchant?
-      redirect_to merchant_dashboard_path
+      redirect_to merchant_dashboard_index_path
     elsif user.admin?
-      redirect_to admin_dashboard_path
+      redirect_to admin_dashboard_index_path
     end
   end
 
